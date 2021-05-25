@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +16,6 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               CircleAvatar(
                 radius: 50.0,
@@ -33,11 +33,67 @@ class MyApp extends StatelessWidget {
                 'Steve Jobs',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 40.0,
+                    fontSize: 40.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Pacifico'),
+              ),
+              Text(
+                'Think Different',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Source Sans Pro',
+                    color: Colors.white,
+                    fontSize: 16.0,
+                    letterSpacing: 1.0),
+              ),
+              SizedBox(
+                height: 20.0,
+                width: 200.0,
+                child: Divider(
                   color: Colors.white,
-                  fontWeight: FontWeight.bold
                 ),
               ),
+              Card(
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 40.0),
+                  child: ListTile(
+                      leading: Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Icon(
+                          Icons.phone,
+                          size: 16.0,
+                          color: Colors.green,
+                        ),
+                      ),
+                      title: Text(
+                        '+1 7890 456 123',
+                        style: TextStyle(
+                            fontSize: 16.0,
+                            fontFamily: 'Source Sans Pro',
+                            color: Colors.green),
+                      ))),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 40.0),
+                child: ListTile(
+                  leading: Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Icon(
+                      Icons.email,
+                      size: 16.0,
+                      color: Colors.green,
+                    ),
+                  ),
+                  title: Text(
+                    'jobs@apple.com',
+                    style: TextStyle(
+                        fontSize: 16.0,
+                        fontFamily: 'Source Sans Pro',
+                        color: Colors.green),
+                  ),
+                ),
+              )
             ],
           ),
         ),
